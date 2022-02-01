@@ -83,7 +83,7 @@ const personalMovieDB = {
         }
     },
 
-    askTheUserRaiting: function() { //024 сделал модификацию и вынес в отдельную функцию
+    askTheUserRaiting: function() { //024
         raiting = prompt("На сколько его оцените от 0-10?");
         if (personalMovieDB.validationOfEnteredData(raiting, personalMovieDB.askTheUserRaiting)) {
             if (+raiting > 10 || +raiting < 0 || isNaN(raiting)) {
@@ -127,7 +127,7 @@ const personalMovieDB = {
         personalMovieDB.outFavoriteGenres();
     },
 
-    outFavoriteGenres: function() {//024 дополнительно добавил
+    outFavoriteGenres: function() {//024
         personalMovieDB.genres.forEach((item, i) => {
             console.log(`Ваш любимый жанр №${i+1} - ${item}`);
         });
@@ -143,7 +143,7 @@ const personalMovieDB = {
         }
     },
 
-    validationOfEnteredData: function(data, nameFunction) { //024 собственная доработка, для получения данных об отмене и пустом вводе
+    validationOfEnteredData: function(data, nameFunction) { //024 для получения данных об отмене и пустом вводе
         if (data == null) {
             console.log("Вы нажали отмену ввода, пожалуйста введите данные");
             nameFunction();
@@ -157,10 +157,9 @@ const personalMovieDB = {
 };
 
 
-// personalMovieDB.start();
-// personalMovieDB.count = howManyFilms;
-// personalMovieDB.classUser();
-// personalMovieDB.writeYourFavoriteGenres();
-// personalMovieDB.showMyDB();
+personalMovieDB.start();
+personalMovieDB.writeYourFavoriteGenres();
+personalMovieDB.showMyDB();
+personalMovieDB.classUser();
 // personalMovieDB.toggleVisibleMyDB();
 
